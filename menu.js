@@ -58,57 +58,91 @@ console.log(pizza.tags[1])
 
 
 /*
-    Third, destructure the price off of the
-    pizza object.
+    Third, destructure the price off of the pizza object.
     
     Print the value of your new price variable.
 */
 
-//CODE HERE
+let {price} = pizza
+console.log(price)
 
 
 /*
-    Fourth, and last, destructure the category
-    property.
+    Fourth, and last, destructure the category property.
 
     Print the value of your category variable. 
 */
 
-//CODE HERE
+let {cat} = pizza
+console.log(cat)
 
 
 //////////////////PROBLEM 3////////////////////
 /* 
-    Create an array with about 5 objects in it.
-    The objects should mimic the `pizza` object.
-    Call the array `foodArr`.
+    Create an array with about 5 objects in it. The objects should mimic the `pizza` object. Call the array `foodArr`.
 
-    Make sure that they have slightly different
-    values for price, popularity, rating, and
-    tags. That way, you'll be able to use this
-    data in some functions that you'll write.
+    Make sure that they have slightly different values for price, popularity, rating, and tags. That way, you'll be able to use this data in some functions that you'll write.
 */
 
-//CODE HERE
+let foodArr = [
+   breadsticks = {
+    name: "Cheesy garlic",
+    price: 4.99,
+    cat: "appetizer",
+    pop: 11413,
+    rating: 4.7,
+    tags: ["cheese", "garlic", "dipping sauce"]
+},
+iceCream = {
+    name: "Rocky Road",
+    price: 3.99,
+    cat: "dessert",
+    pop: 17474,
+    rating: 4.9,
+    tags: ["chocolate", "almond", "marshmallow"]
+},
+brownies = {
+    name: "Triple Chocolate",
+    price: 3.49,
+    cat: "dessert",
+    pop: 15658,
+    rating: 4.8,
+    tags: ["chocolate", "chocolate chips", "fudge", "walnuts"]
+},
+soda = {
+    name: "Root Beer",
+    price: 1.49,
+    cat: "beverage",
+    pop: 11859,
+    rating: 4.5,
+    tags: ["soft drink", "ice"]
+},
+salad = {
+    name: "Caesar",
+    price: 4.49,
+    cat: "appetizer",
+    pop: 12589,
+    rating: 4.6,
+    tags: ["croutons", "lettuce", "low-fat dressing"]
+},
+]
+// console.log(foodArr)
 
 
 
 //////////////////PROBLEM 4////////////////////
 /* 
-    Let's filter the food objects according
-    to their tags.
-
-    Write a callback function below that will
-    return only food objects that have a certain tag.
-
-    You can check for any tag that at least 1 of
-    your food objects has.
+    Let's filter the food objects according to their tags.
+    Write a callback function below that will return only food objects that have a certain tag.
+    You can check for any tag that at least 1 of your food objects has.
 */
 
-//CODE HERE
-
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
-
+function callback(food, tag) {
+    return food.tags.includes(tag)
+  }
+  
+const filteredFood = foodArr.filter((food) => callback(food, "chocolate"))
+console.log(filteredFood)
 
 
 //////////////////PROBLEM 5////////////////////
