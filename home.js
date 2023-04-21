@@ -111,21 +111,22 @@ const deals = [
     to replace the 15 with a 10.
 */
 
-//CODE HERE
+const updatedDiscount = deals[0].title.replace('15%', '10%')
+deals[0].title = updatedDiscount
+console.log(updatedDiscount)
+console.log(deals)
 
 
 
 /*
-    The restaurant is going to continue its
-    family deal for another month. 
+    The restaurant is going to continue its family deal for another month. 
 
-    Reassign the value of the second deal's desc
-    to be itself, but use the `replace` method
-    to replace the word March with April.
+    Reassign the value of the second deal's desc to be itself, but use the `replace` method to replace the word March with April.
 
-    You should also make sure that there is no
-    whitespace in this string, since it seems
-    to be displaying wrong on the live site.
+    You should also make sure that there is no whitespace in this string, since it seems to be displaying wrong on the live site.
 */
 
-//CODE HERE
+const updatedMonths = deals[1].desc.replace('March', 'April').trim()
+deals[1].desc = updatedMonths
+console.log(updatedMonths)
+console.log(deals)
