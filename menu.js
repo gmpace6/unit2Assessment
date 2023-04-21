@@ -19,18 +19,21 @@
         - rating (number)
         - tags (array of strings)
 
-    Make sure that you give your properties values
-    of the correct data type.
+    Make sure that you give your properties values of the correct data type.
 
-    Note: the category is something like appetizer/entree,
-    the popularity is an overall ranking, the
-    rating is an average of all customer ratings, and
-    for the tags, think of things that a
-    user might filter by, like 'gluten-free' or
+    Note: the category is something like appetizer/entree, the popularity is an overall ranking, the rating is an average of all customer ratings, and for the tags, think of things that a user might filter by, like 'gluten-free' or
     'kids'
 */
 
-//CODE HERE
+let pizza = {
+    name: "Hawaiian",
+    price: 9.99,
+    cat: "entree",
+    pop: 15209,
+    rating: 4.9,
+    tags: ["pineapple", "ham", "stuffed crust"]
+}
+console.log(pizza)
 
 
 
@@ -38,11 +41,10 @@
 /* 
     Let's print a few values from our pizza object.
 
-    First, log the popularity of pizza. 
-    Use dot notation to access the value.
+    First, log the popularity of pizza. Use dot notation to access the value.
 */
 
-//CODE HERE
+console.log(pizza.pop)
 
 
 /*
@@ -52,7 +54,7 @@
     get the value.
 */
 
-//CODE HERE
+console.log(pizza.tags[1])
 
 
 /*
